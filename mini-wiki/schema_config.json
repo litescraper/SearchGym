@@ -1,0 +1,257 @@
+{
+    "entity_types": [
+        {
+            "name": "Country",
+            "prefix": "country"
+        },
+        {
+            "name": "City",
+            "prefix": "city"
+        },
+        {
+            "name": "University",
+            "prefix": "university"
+        },
+        {
+            "name": "Company",
+            "prefix": "company"
+        },
+        {
+            "name": "Person",
+            "prefix": "person"
+        }
+    ],
+    "Country_Attributes": [
+        {
+            "name": "population",
+            "type": ["Compulsory", "Non-Entity", "1-1"],
+            "range": [100000000, 1000000000]
+        },
+        {
+            "name": "gdp",
+            "type": ["Compulsory", "Non-Entity", "1-1"],
+            "range": [1000000000000, 10000000000000]
+        },
+        {
+            "name": "official_language",
+            "type": ["Compulsory", "Non-Entity", "n-1"]
+        },
+        {
+            "name": "total_area",
+            "type": ["Compulsory", "Non-Entity", "1-1"],
+            "range": [100000000, 1000000000000]
+        },
+        {
+            "name": "sister_country",
+            "type": ["Optional", "Entity", "1-1"],
+            "corresponding_entity": "Country"
+        },
+        {
+            "name": "number_of_ethnic_groups",
+            "type": ["Optional", "Non-Entity", "n-1"],
+            "range": [1, 10]
+        },
+        {
+            "name": "number_of_cities",
+            "type": ["Optional", "Non-Entity", "n-1"],
+            "range": [5, 20]
+        },
+        {
+            "name": "national_day",
+            "type": ["Optional", "Non-Entity", "1-1"]
+        }
+    ],
+    "City_Attributes": [
+        {
+            "name": "population",
+            "type": ["Compulsory", "Non-Entity", "1-1"],
+            "range": [100000, 10000000]
+        },
+        {
+            "name": "area",
+            "type": ["Compulsory", "Non-Entity", "1-1"],
+            "range": [10000000, 100000000]
+        },
+        {
+            "name": "located_country",
+            "type": ["Compulsory", "Entity", "n-1"],
+            "corresponding_entity": "Country"
+        },
+        {
+            "name": "gdp",
+            "type": ["Compulsory", "Non-Entity", "1-1"],
+            "range": [1000000000, 1000000000000]
+        },
+        {
+            "name": "capital_of",
+            "type": ["Optional", "Entity", "1-1"],
+            "corresponding_entity": "Country"
+        },
+        {
+            "name": "sister_city",
+            "type": ["Optional", "Entity", "1-1"],
+            "corresponding_entity": "City"
+        },
+        {
+            "name": "number_of_universities",
+            "type": ["Optional", "Non-Entity", "n-1"],
+            "range": [1, 10]
+        },
+        {
+            "name": "number_of_companies",
+            "type": ["Optional", "Non-Entity", "n-1"],
+            "range": [1, 10]
+        }
+    ],
+    "University_Attributes": [
+        {
+            "name": "established_year",
+            "type": ["Compulsory", "Non-Entity", "n-1"],
+            "range": [1700, 2000]
+        },
+        {
+            "name": "registered_students",
+            "type": ["Compulsory", "Non-Entity", "1-1"],
+            "range": [1000, 10000]
+        },
+        {
+            "name": "located_city",
+            "type": ["Compulsory", "Entity", "n-1"],
+            "corresponding_entity": "City"
+        },
+        {
+            "name": "number_of_faculties",
+            "type": ["Compulsory", "Non-Entity", "n-1"],
+            "range": [5, 15]
+        },
+        {
+            "name": "number_of_professors",
+            "type": ["Compulsory", "Non-Entity", "n-1"],
+            "range": [50, 500]
+        },
+        {
+            "name": "university_rank",
+            "type": ["Compulsory", "Non-Entity", "1-1"],
+            "range": [1, 100]
+        },
+        {
+            "name": "number_of_research_projects",
+            "type": ["Optional", "Non-Entity", "n-1"],
+            "range": [100, 1000]
+        },
+        {
+            "name": "number_of_research_publications",
+            "type": ["Optional", "Non-Entity", "n-1"],
+            "range": [500, 50000]
+        },
+        {
+            "name": "number_of_research_awards",
+            "type": ["Optional", "Non-Entity", "n-1"],
+            "range": [100, 1000]
+        },
+        {
+            "name": "number_of_research_patents",
+            "type": ["Optional", "Non-Entity", "n-1"],
+            "range": [1000, 20000]
+        }
+    ],
+    "Company_Attributes": [
+        {
+            "name": "founded_year",
+            "type": ["Compulsory", "Non-Entity", "n-1"],
+            "range": [1900, 2000]
+        },
+        {
+            "name": "number_of_employees",
+            "type": ["Compulsory", "Non-Entity", "1-1"],
+            "range": [1000, 10000]
+        },
+        {
+            "name": "headquarter_city",
+            "type": ["Compulsory", "Entity", "n-1"],
+            "corresponding_entity": "City"
+        },
+        {
+            "name": "number_of_departments",
+            "type": ["Compulsory", "Non-Entity", "n-1"],
+            "range": [5, 15]
+        },
+        {
+            "name": "number_of_products",
+            "type": ["Optional", "Non-Entity", "n-1"],
+            "range": [10, 100]
+        },
+        {
+            "name": "franchise_count",
+            "type": ["Optional", "Non-Entity", "n-1"],
+            "range": [1, 10]
+        },
+        {
+            "name": "franchise_revenue",
+            "type": ["Optional", "Non-Entity", "n-1"],
+            "range": [100000000, 10000000000]
+        }
+    ],
+    "Person_Attributes": [
+        {
+            "name": "birth_year",
+            "type": ["Compulsory", "Non-Entity", "n-1"],
+            "range": [1900, 2025]
+        },
+        {
+            "name": "gender",
+            "type": ["Compulsory", "Non-Entity", "n-1"],
+            "range": ["Male", "Female"]
+        },
+        {
+            "name": "birth_city",
+            "type": ["Compulsory", "Entity", "n-1"],
+            "corresponding_entity": "City"
+        },
+        {
+            "name": "current_living_city",
+            "type": ["Compulsory", "Entity", "n-1"],
+            "corresponding_entity": "City"
+        },
+        {
+            "name": "university_attended",
+            "type": ["Optional", "Entity", "n-1"],
+            "corresponding_entity": "University"
+        },
+        {
+            "name": "current_working_company",
+            "type": ["Optional", "Entity", "n-1"],
+            "corresponding_entity": "Company"
+        },
+        {
+            "name": "father",
+            "type": ["Optional", "Entity", "n-1"],
+            "corresponding_entity": "Person"
+        },
+        {
+            "name": "mother",
+            "type": ["Optional", "Entity", "n-1"],
+            "corresponding_entity": "Person"
+        },
+        {
+            "name": "spouse",
+            "type": ["Optional", "Entity", "1-1"],
+            "corresponding_entity": "Person"
+        },
+        {
+            "name": "leader_of_country",
+            "type": ["Optional", "Entity", "1-1"],
+            "corresponding_entity": "Person"
+        },
+        {
+            "name": "mayor_of_city",
+            "type": ["Optional", "Entity", "1-1"],
+            "corresponding_entity": "Person"
+        },
+        {
+            "name": "best_friend",
+            "type": ["Optional", "Entity", "1-1"],
+            "corresponding_entity": "Person"
+        }
+    ]
+}

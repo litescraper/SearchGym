@@ -1,0 +1,26 @@
+
+api_keys:
+  # Serper search API key (get from https://serper.dev/)
+  serper_api_key: "your-serper-api-key"
+  
+  # OpenAI API key and base URL
+  openai_api_key: ""
+  openai_api_base: ""
+  
+  # Jina API key for web content extraction (get from https://jina.ai/)
+  jina_api_key: "your-jina-api-key"
+
+# Other configuration options
+settings:
+  # Whether to enable debug mode
+  debug: false
+  
+  # Web page cache configuration
+  enable_cache: false
+  cache_size: 10000
+  cache_file: "./webpage_cache.json"
+  
+  # Local search server configuration
+  local_server:
+    address: "your-server-ip"
+    port: "8000"

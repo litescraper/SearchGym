@@ -1,0 +1,35 @@
+{
+  "parallel_same_type_numerical": 1118,
+  "parallel_same_type_node": 2952,
+  "parallel_diff_type": 2732,
+  "combo_qa": 2622,
+  "total": 9424,
+  "numerical_types": [
+    "Ethic Group Count",
+    "Year",
+    "Product Count",
+    "GDP",
+    "University Count",
+    "Employee Count",
+    "Department Count",
+    "Student Count",
+    "Research Award Count",
+    "Professor Count",
+    "Area",
+    "Company Count",
+    "University Rank",
+    "Population Count",
+    "Franchise Revenue",
+    "Franchise Count",
+    "Research Patent Count",
+    "Research Publication Count",
+    "Research Project Count"
+  ],
+  "node_types": [
+    "Person",
+    "Company",
+    "Country",
+    "City",
+    "University"
+  ]
+}

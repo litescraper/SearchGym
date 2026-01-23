@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "total_paths": 40920,
+    "valid_paths": 40920,
+    "invalid_paths": 0,
+    "validity_rate": 1.0
+  },
+  "statistics": {
+    "path_length_stats": {
+      "1": 10003,
+      "2": 9171,
+      "3": 7203,
+      "4": 5331,
+      "5": 4606,
+      "6": 4606
+    },
+    "duplicate_node_stats": {},
+    "duplicate_edge_stats": {}
+  },
+  "invalid_paths": []
+}

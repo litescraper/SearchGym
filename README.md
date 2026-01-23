@@ -6,6 +6,12 @@
 
 **SearchGym** is a high-fidelity simulation environment designed to train robust search agents without the prohibitive costs and noise associated with live web training. By constructing a verifiable knowledge graph and an aligned document corpus, SearchGym provides a closed-loop environment where every reasoning task is factually grounded and strictly solvable.
 
+## 📊 Data Construction Pipeline
+
+<p align="center">
+  <img src="assets/data_pipeline.png" alt="SearchGym Data Pipeline" width="100%">
+</p>
+
 ## 🌟 Core Environments
 
 SearchGym operates across three distinct search environments, each serving a specific purpose in the pipeline (Training vs. Evaluation).

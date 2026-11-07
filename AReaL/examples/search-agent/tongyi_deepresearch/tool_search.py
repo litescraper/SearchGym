@@ -44,7 +44,7 @@ class Search(BaseTool):
             for attempt in range(5):
                 try:
                     async with session.post(
-                        "https://google.serper.dev/search",
+                        f"{(os.getenv('SERPER_BASE_URL') or 'https://google.serper.dev').rstrip('/')}/search",
                         json=payload,
                         headers=headers,
                     ) as resp:

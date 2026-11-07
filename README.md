@@ -6,6 +6,14 @@
 
 **SearchGym** is a high-fidelity simulation environment designed to train robust search agents without the prohibitive costs and noise associated with live web training. By constructing a verifiable knowledge graph and an aligned document corpus, SearchGym provides a closed-loop environment where every reasoning task is factually grounded and strictly solvable.
 
+For live Serper search, optionally set `SERPER_BASE_URL` to a compatible
+base URL without `/search`. Trailing slashes are removed before appending
+the route. Unset or empty values use `https://google.serper.dev`, and the existing
+API-key settings, payloads, and result formatting are unchanged. Propagate the
+setting to worker processes when using distributed launchers.
+
+Support any Serper.dev-compatible endpoint (like litescrape.com, serpbase.dev, serpensapi.org, and others)
+
 ## 📊 Data Construction Pipeline
 
 <p align="center">

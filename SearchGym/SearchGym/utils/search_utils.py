@@ -139,7 +139,7 @@ class AsyncOnlineSearchClient:
     def __init__(self, enable_cache: bool = True, cache_size: int = 10000, cache_file: str = "../webpage_cache.json",
                  use_jina: bool = False, jina_api_key: str = None, wrapper_format: bool = True):
         # Serper API
-        self.serper_server_addr = "https://google.serper.dev"
+        self.serper_server_addr = (os.getenv("SERPER_BASE_URL") or "https://google.serper.dev").rstrip("/")
         self.serper_api_key = os.environ.get('SERPER_API_KEY', '')
         if not self.serper_api_key:
             raise RuntimeError("Serper API key is not set. Please configure it in config.yaml or set the SERPER_API_KEY environment variable.")
